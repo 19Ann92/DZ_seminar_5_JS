@@ -56,22 +56,54 @@
 // Дан массив products, необходимо цену каждого продукта уменьшить
 // на 15% используя метод forEach.
 
+// const products = [
+//   {
+//     id: 3,
+//     price: 200,
+//   },
+//   {
+//     id: 4,
+//     price: 900,
+//   },
+//   {
+//     id: 1,
+//     price: 1000,
+//   },
+// ];
+
+// products.forEach(function (el) {
+//   el.price *= 0.85;
+// });
+// console.log(products);
+
+// Задание 4
+// 1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна
+// фотография используя метод filter. Исходные данные - массив products.
+// 2. Необходимо отсортировать массив products используя метод sort по цене,
+// начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести
+// отсортированный массив в консоль.
+
 const products = [
   {
     id: 3,
-    price: 200,
+    price: 127,
+    photos: ["1.jpg", "2.jpg"],
   },
   {
-    id: 4,
-    price: 900,
+    id: 5,
+    price: 499,
+    photos: [],
   },
   {
-    id: 1,
-    price: 1000,
+    id: 10,
+    price: 26,
+    photos: ["3.jpg"],
+  },
+  {
+    id: 8,
+    price: 78,
   },
 ];
 
-products.forEach(function (el) {
-  el.price *= 0.85;
-});
-console.log(products);
+console.log(products.filter((el) => "photos" in el && el.photos.length !== 0));
+console.log(products.sort((el1, el2) => el1.price - el2.price));
