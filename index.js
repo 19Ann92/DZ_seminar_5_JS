@@ -83,27 +83,51 @@
 // начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести
 // отсортированный массив в консоль.
 
-const products = [
-  {
-    id: 3,
-    price: 127,
-    photos: ["1.jpg", "2.jpg"],
-  },
-  {
-    id: 5,
-    price: 499,
-    photos: [],
-  },
-  {
-    id: 10,
-    price: 26,
-    photos: ["3.jpg"],
-  },
-  {
-    id: 8,
-    price: 78,
-  },
+// const products = [
+//   {
+//     id: 3,
+//     price: 127,
+//     photos: ["1.jpg", "2.jpg"],
+//   },
+//   {
+//     id: 5,
+//     price: 499,
+//     photos: [],
+//   },
+//   {
+//     id: 10,
+//     price: 26,
+//     photos: ["3.jpg"],
+//   },
+//   {
+//     id: 8,
+//     price: 78,
+//   },
+// ];
+
+// console.log(products.filter((el) => "photos" in el && el.photos.length !== 0));
+// console.log(products.sort((el1, el2) => el1.price - el2.price));
+
+// **Задание 5**
+// Дано 2 массива
+// Вам необходимо объединить 2 этих массива, чтобы значения первого массива
+// были ключами, а значения второго массива — значениями.
+
+const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+const ru = [
+  "понедельник",
+  "вторник",
+  "среда",
+  "четверг",
+  "пятница",
+  "суббота",
+  "воскресенье",
 ];
 
-console.log(products.filter((el) => "photos" in el && el.photos.length !== 0));
-console.log(products.sort((el1, el2) => el1.price - el2.price));
+const obj = {};
+
+for (let i = 0; i < en.length; i++) {
+  obj[en[i]] = ru[i];
+}
+
+console.log(obj);
